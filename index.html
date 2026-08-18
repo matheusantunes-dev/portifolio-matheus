@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Matheus Antunes Reis</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <h2>Sobre mim</h2>
+
+            <img src="/assets/profile.png"
+                alt="Foto de perfil de Matheus Antunes" class="foto-perfil">
+
+            <p>Olá! Sou <strong>Matheus Antunes Reis</strong>, estudante de Sistemas de Informação na UNINTER e
+                Desenvolvedor de Software
+                Júnior.</p>
+            <p>Minha trajetória começou na área fiscal, onde identifiquei oportunidades para automatizar processos
+                repetitivos e reduzir erros operacionais. Hoje, atuo no desenvolvimento de soluções web e mobile
+                eficientes, entregando aplicações responsivas, funcionais e com forte propósito.</p>
+        </section>
+
+        <section id="formacao">
+            <h2>Formação</h2>
+            <ul>
+                <li>
+                    <strong>Bacharelado em Sistemas de Informação</strong> - UNINTER
+                    <br><small>Fevereiro de 2024 - Dezembro de 2027</small>
+                </li>
+                <li>
+                    <strong>Ensino Técnico em Informática</strong> - Instituto Gênesis
+                    <br><small>Abril de 2022 - Dezembro de 2023</small>
+                </li>
+            </ul>
+        </section>
+
+        <section id="portfolio">
+            <h2>Projetos de Destaque</h2>
+            <p>Conheça os principais sistemas e aplicações desenvolvidos:</p>
+            <ul>
+                <li>
+                    <strong>Sejais Santo (Web):</strong> Plataforma web católica interativa desenvolvida com foco na
+                    evangelização, unindo navegação fluida, acessibilidade e design responsivo.
+                    <br><a href="https://sejais-santo.vercel.app/" target="_blank">Acessar projeto ao vivo &rarr;</a>
+                </li>
+                <li>
+                    <strong>Mail Sense AI (Web):</strong> Ferramenta inteligente voltada para otimização e gestão de
+                    e-mails, integrando conceitos modernos à experiência web.
+                    <br><a href="https://mail-sense-ai.vercel.app/" target="_blank">Acessar projeto ao vivo &rarr;</a>
+                </li>
+                <li>
+                    <strong>FotoVitrine (Mobile):</strong> Aplicativo Android comercial onde atuo implementando
+                    autenticação (Google Auth/Supabase), segurança de dados (RLS) e recursos nativos, desenvolvido em
+                    Kotlin e Jetpack Compose.
+                    <br><a href="https://encurtador.com.br/AlnX" target="_blank">Acessar página de tutorial de
+                        instalação do aplicativo &rarr;</a>
+                </li>
+                <li>
+                    <strong>Automação Fiscal (Scripts):</strong> Desenvolvimento de scripts em Python/JavaScript para
+                    automação de rotinas fiscais e redução de tempo em processos internos.
+                </li>
+            </ul>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Tem alguma dúvida ou proposta profissional? Envie uma mensagem:</p>
+
+            <form id="form-contato" action="https://formsubmit.co/matheusantunesreis6@gmail.com" method="POST">
+
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="Novo contato pelo Portfólio!">
+
+                <input type="hidden" name="_next" value="https://portifolio-matheus-antunes-reis.vercel.app/#contato">
+
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+
+                <label for="email">Seu E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com">
+
+                <label for="mensagem">Sua Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Matheus Antunes Reis. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,259 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E SCROLL SUAVE (Sem quebrar o layout)
+   ========================================================================== */
+html {
+    scroll-behavior: smooth;
+    /* Animação fluida ao clicar nos links do menu */
+    scroll-padding-top: 90px;
+    /* Compensa o cabeçalho fixo para não esconder títulos */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #334155;
+    line-height: 1.8;
+    /* Espaçamento confortável para leitura */
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   CABEÇALHO E MENU FIXO
+   ========================================================================== */
+header {
+    background-color: #2196cc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(11, 113, 153, 0.8);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+nav ul li {
+    margin: 0 22px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Sublinhado animado suave nos links do menu */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: #38bdf8;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #38bdf8;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ==========================================================================
+   ESTRUTURA PRINCIPAL E SEÇÕES CENTRALIZADAS
+   ========================================================================== */
+main {
+    max-width: 850px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+section {
+    min-height: 100vh;
+    padding: 90px 25px 50px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+
+#sobre {
+    align-items: center;
+    text-align: center;
+}
+
+h2 {
+    color: #1e293b;
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #475569;
+    max-width: 680px;
+    font-size: 20px;
+}
+
+/* ==========================================================================
+   FOTO DE PERFIL COM ANIMAÇÃO SUAVE
+   ========================================================================== */
+.foto-perfil {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #38bdf8;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.2);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.foto-perfil:hover {
+    transform: scale(1.05);
+    /* Zoom elástico suave */
+    box-shadow: 0 12px 25px rgba(56, 189, 248, 0.4);
+}
+
+/* ==========================================================================
+   CARDS DE PROJETOS E FORMAÇÃO (Com transição fluida)
+   ========================================================================== */
+#portfolio ul,
+#formacao ul {
+    list-style: none;
+    width: 100%;
+}
+
+#portfolio li,
+#formacao li {
+    background: #ffffff;
+    padding: 24px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+#portfolio li:hover,
+#formacao li:hover {
+    transform: translateY(-4px);
+    /* Elevação orgânica e suave */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+    border-color: #38bdf8;
+}
+
+#portfolio a {
+    color: #0ea5e9;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#portfolio a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   FORMULÁRIO DE CONTATO E BOTÕES
+   ========================================================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    text-align: left;
+}
+
+label {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #334155;
+    font-size: 15px;
+}
+
+input,
+textarea {
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    color: #334155;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+}
+
+button {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #38bdf8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(14, 165, 233, 0.3);
+}
+
+button:hover {
+    background-color: #0ea5e9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(14, 165, 233, 0.8);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+footer {
+    background-color: #184f68;
+
+    padding: 5px 10px;
+    font-size: 15px;
+    /* Propriedades do Flexbox para centralizar tudo perfeitamente */
+    display: flex;
+    justify-content: center;
+    /* Centraliza na horizontal */
+    align-items: center;
+    /* Centraliza na vertical */
+    min-height: 100px;
+    /* Garante uma altura mínima para o alinhamento vertical aparecer bem */
+    text-align: center;
+    /* Garante que o texto se alinhe ao centro caso quebre linha */
+}
+
+footer p {
+    color: white;
+}
